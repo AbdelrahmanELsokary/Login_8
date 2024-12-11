@@ -137,8 +137,18 @@ section .container .login form input {
   padding: 15px;
   margin-top: 7px;
 }
-section .container .login form input[type="text"] {
+section .container .login form input[type="email"] {
   border: 1px solid var(--Blueberry);
+}
+section .container .login form .info_user label {
+  display: block;
+}
+section .container .login form .info_user input {
+  display: block;
+}
+section .container .login form .info_user {
+  display: flex;
+  gap: 10px;
 }
 section .container .login form a {
   display: block;
@@ -211,11 +221,11 @@ section .container .login .or .social_icon a {
     font-weight: 600;
   }
   section .container .login form {
-    padding-top: 100px;
+    padding-top: 50px;
   }
   section .container .login .titel .sign_in h1 {
     position: relative;
-    font-size: 40px;
+    font-size: 35px;
   }
   section .container .login .titel .sign_in span,
   section .container .login .or .social_icon .google {
@@ -231,7 +241,7 @@ section .container .login .or .social_icon a {
   section .container .login .or {
     width: 90%;
     position: absolute;
-    top: 25%;
+    top: 21%;
   }
   section .container .login .or span {
     display: none;
