@@ -11,10 +11,13 @@
   --Fulvous: #e48700;
   --Chinese-Red: #ad3113;
   --Philippine-Gold: #b87514;
+  --Old-Lace: #fff4e3;
   --Blueberry: #4285f4;
   --Gray: #808080;
   --Silver-Chalice: #ababab;
   --Philippine-Gray: #8d8d8d;
+  --shadow: #6862623f;
+  --Cultured: #f6f6f6;
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -44,7 +47,7 @@ a {
 header {
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 20;
   padding: 20px 0;
 }
 header .container nav a {
@@ -54,31 +57,183 @@ header .container nav a {
   margin-left: 25px;
 }
 section .container {
+  position: relative;
   height: 100vh;
   display: flex;
 }
-.container .middle_yellow {
+section .container .middle_yellow {
   position: relative;
   width: 50%;
   background-color: var(--Middle-Yellow);
   background-image: url(../images/saly.webp);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 60px;
 }
-.container .middle_yellow::before {
+section .container .middle_yellow::before {
   content: "";
   position: absolute;
   top: 67%;
   right: 0;
-  width: 79%;
+  width: 85%;
   height: 1px;
   background-color: #000;
 }
-.container .white {
+section .container .white {
   position: relative;
   width: 50%;
   background-color: var(--white);
   background-image: url(../images/saly-1.webp);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 200px;
+}
+section .container .login {
+  position: absolute;
+  left: 30%;
+  top: 5%;
+  width: 40%;
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 0px 4px 35px 0px var(--shadow);
+  z-index: 2;
+  padding: 20px;
+}
+section .container .login .titel {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+section .container .login .titel .sign_in span {
+  font-size: 20px;
+  font-weight: 400;
+}
+section .container .login .titel .sign_in h1 {
+  font-size: 55px;
+  font-weight: 500;
+}
+section .container .login .titel .sign_up span {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Philippine-Gray);
+}
+section .container .login .titel .sign_up a {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Philippine-Gold);
+}
+section .container .login form {
+  padding: 20px;
+}
+section .container .login form label {
+  font-size: 16px;
+  font-weight: 400;
+}
+section .container .login form input {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--Silver-Chalice);
+  border-radius: 9px;
+  outline: none;
+  padding: 15px;
+  margin-top: 7px;
+}
+section .container .login form input[type="text"] {
+  border: 1px solid var(--Blueberry);
+}
+section .container .login form a {
+  display: block;
+  text-align: end;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--Chinese-Red);
+  padding: 10px 0 20px 0;
+}
+section .container .login form input[type="submit"] {
+  background-color: var(--Fulvous);
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0px 4px 35px 0px var(--shadow);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+}
+section .container .login .or {
+  padding: 20px;
+}
+section .container .login .or span {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Silver-Chalice);
+  padding: 20px 0;
+}
+section .container .login .or .social_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+section .container .login .or .social_icon .google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 219px;
+  background-color: var(--Old-Lace);
+  color: var(--Philippine-Gold);
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 9px;
+  padding: 10px;
+}
+section .container .login .or .social_icon .google img {
+  padding-right: 20px;
+}
+section .container .login .or .social_icon a {
+  display: flex;
+  align-items: center;
+  background-color: var(--Cultured);
+  border-radius: 9px;
+  padding: 10px;
+}
+@media (max-width: 991px) {
+  section .container {
+    height: 105vh;
+    background-color: var(--Middle-Yellow);
+  }
+  section .container .login {
+    width: 100%;
+    left: 0;
+    margin-top: 50px;
+  }
+  section .container .login .titel .sign_in .lorem {
+    color: var(--Fulvous);
+    font-weight: 600;
+  }
+  section .container .login form {
+    padding-top: 100px;
+  }
+  section .container .login .titel .sign_in h1 {
+    position: relative;
+    font-size: 40px;
+  }
+  section .container .login .titel .sign_in span,
+  section .container .login .or .social_icon .google {
+    font-size: 13px;
+  }
+  section .container .login form label {
+    font-size: 14px;
+  }
+  section .container .middle_yellow,
+  .white {
+    display: none;
+  }
+  section .container .login .or {
+    width: 90%;
+    position: absolute;
+    top: 25%;
+  }
+  section .container .login .or span {
+    display: none;
+  }
 }
