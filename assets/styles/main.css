@@ -55,11 +55,11 @@ header .container nav a {
 }
 section .container {
   height: 100vh;
+  display: flex;
 }
 .container .middle_yellow {
   position: relative;
   width: 50%;
-  height: 100vh;
   background-color: var(--Middle-Yellow);
   background-image: url(../images/saly.webp);
   background-repeat: no-repeat;
@@ -71,6 +71,14 @@ section .container {
   top: 67%;
   right: 0;
   width: 79%;
-  height: 1.4px;
+  height: 1px;
   background-color: #000;
+}
+.container .white {
+  position: relative;
+  width: 50%;
+  background-color: var(--white);
+  background-image: url(../images/saly-1.webp);
+  background-repeat: no-repeat;
+  background-position: center;
 }
