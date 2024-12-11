@@ -42,10 +42,35 @@ a {
   text-decoration: none;
 }
 header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
   padding: 20px 0;
 }
 header .container nav a {
   font-size: 20px;
   font-weight: 600;
   color: var(--Dark-Coral);
+  margin-left: 25px;
+}
+section .container {
+  height: 100vh;
+}
+.container .middle_yellow {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  background-color: var(--Middle-Yellow);
+  background-image: url(../images/saly.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.container .middle_yellow::before {
+  content: "";
+  position: absolute;
+  top: 67%;
+  right: 0;
+  width: 79%;
+  height: 1.4px;
+  background-color: #000;
 }
