@@ -140,15 +140,14 @@ section .container .login form input {
 section .container .login form input[type="email"] {
   border: 1px solid var(--Blueberry);
 }
-section .container .login form .info_user label {
-  display: block;
-}
-section .container .login form .info_user input {
-  display: block;
-}
 section .container .login form .info_user {
   display: flex;
   gap: 10px;
+  width: 100%;
+}
+section .container .login form .info_user .contact_number,
+.user_name {
+  width: 100%;
 }
 section .container .login form a {
   display: block;
