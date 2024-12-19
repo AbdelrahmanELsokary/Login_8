@@ -47,7 +47,7 @@ a {
 header {
   position: fixed;
   width: 100%;
-  z-index: 20;
+  z-index: 5;
   padding: 20px 0;
 }
 header .container nav a {
@@ -57,34 +57,34 @@ header .container nav a {
   margin-left: 25px;
 }
 section .container {
-  position: relative;
-  height: 100vh;
   display: flex;
 }
 section .container .middle_yellow {
-  position: relative;
-  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--Middle-Yellow);
-  background-image: url(../images/saly.webp);
-  background-repeat: no-repeat;
-  background-position: 60px;
+  height: 100vh;
+  width: 50%;
 }
-section .container .middle_yellow::before {
-  content: "";
-  position: absolute;
-  top: 67%;
-  right: 0;
-  width: 85%;
-  height: 1px;
-  background-color: #000;
+section .container .middle_yellow img {
+  border-bottom: 2px solid;
+  padding-right: 150px;
+}
+@media (min-width:991px) {
+  section .container{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 }
 section .container .white {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   width: 50%;
+  height: 100vh;
   background-color: var(--white);
-  background-image: url(../images/saly-1.webp);
-  background-repeat: no-repeat;
-  background-position: 200px;
 }
 section .container .login {
   position: absolute;
@@ -205,9 +205,17 @@ section .container .login .or .social_icon a {
   border-radius: 9px;
   padding: 10px;
 }
+section .container .white {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50%;
+  height: 100vh;
+  background-color: var(--white);
+}
 @media (max-width: 991px) {
-  section .container {
-    height: 105vh;
+  section {
+    height: 100vh;
     background-color: var(--Middle-Yellow);
   }
   section .container .login {
@@ -220,29 +228,29 @@ section .container .login .or .social_icon a {
     font-weight: 600;
   }
   section .container .login form {
-    padding-top: 50px;
+    padding-top: 100px;
+  }
+  section .container .login .titel {
+    padding: 6px;
   }
   section .container .login .titel .sign_in h1 {
-    position: relative;
-    font-size: 35px;
+    font-size: 30px;
   }
   section .container .login .titel .sign_in span,
   section .container .login .or .social_icon .google {
-    font-size: 13px;
+    font-size: 11px;
   }
   section .container .login form label {
     font-size: 14px;
-  }
-  section .container .middle_yellow,
-  .white {
-    display: none;
   }
   section .container .login .or {
     width: 90%;
     position: absolute;
     top: 21%;
   }
-  section .container .login .or span {
+  section .container .login .or span , 
+  section .container .middle_yellow,
+  section .container .white {
     display: none;
   }
 }
